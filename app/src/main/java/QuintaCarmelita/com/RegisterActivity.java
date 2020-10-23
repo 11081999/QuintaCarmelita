@@ -16,14 +16,21 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class RegisterActivity extends AppCompatActivity {
 
     private EditText inputEmail, inputPassword, inputUsername;
     private ProgressBar progressBar;
 
+    //Real time database variables
+    private FirebaseDatabase mFirebaseDatabaseInstance;
+    private DatabaseReference mFireBaseDatabase;
+    //values to store
     private String userId;
-    private String email;
+    private String emailAddress;
 
     private FirebaseAuth mAuth;
 
@@ -38,6 +45,9 @@ public class RegisterActivity extends AppCompatActivity {
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
         mAuth = FirebaseAuth.getInstance();
+
+        //Instance Database
+        mFirebaseDatabaseInstance= FirebaseDatabase.getInstance();
     }
 
     @Override
@@ -100,6 +110,20 @@ public class RegisterActivity extends AppCompatActivity {
                                     Toast.LENGTH_LONG).show();
                             Log.e("MyTag", task.getException().toString());
                         } else {
+
+
+                            //Referance to the user
+                            mFireBaseDatabase= mFirebaseDatabaseInstance.getReference("users");
+
+                            FirebaseUser user =FirebaseAuth.getInstance().getCurrentUser();
+
+                            userId= user.getUid();
+                            emailAddress= user.getEmail();
+
+                            User myUser= new User(username.toString(), emailAddress.toString());
+                            mFireBaseDatabase.child(userId).setValue(myUser);
+
+                            //____Database______//
 
                             startActivity(new Intent(RegisterActivity.this, SignedInActivity.class));
                             finish();
