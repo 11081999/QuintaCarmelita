@@ -1,4 +1,3 @@
-/*
 package QuintaCarmelita.com;
 
 import android.content.Intent;
@@ -41,4 +40,3 @@ public class SignedInActivity extends AppCompatActivity {
 
     }
 }
- */

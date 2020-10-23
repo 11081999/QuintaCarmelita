@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "410245960087",
+    "firebase_url": "https://quintacarmelita-9ca03.firebaseio.com",
+    "project_id": "quintacarmelita-9ca03",
+    "storage_bucket": "quintacarmelita-9ca03.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:410245960087:android:4e132e575a0680caa034d2",
+        "android_client_info": {
+          "package_name": "QuintaCarmelita.com"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "410245960087-j8c3vavgmc2kqchaajrg7qi2jr9f9uts.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArKFTjMTQ4Ut73hdwJ3AvHSyCODGb7xjA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "410245960087-j8c3vavgmc2kqchaajrg7qi2jr9f9uts.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
