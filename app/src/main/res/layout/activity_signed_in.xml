@@ -4,7 +4,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorPrimary"
+    android:background="@drawable/busqueda"
         tools:context="QuintaCarmelita.com.SignedInActivity">
         android:background="@color/colorPrimary"
         android:padding="@dimen/activity_horizontal_margin"
@@ -29,6 +29,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:gravity="center_vertical|center_horizontal|center"
+            android:textColor="@color/bg_login"
             android:text="You have successfully logged in or registered"
             android:textSize="18sp"
             tools:layout_editor_absoluteX="0dp"
