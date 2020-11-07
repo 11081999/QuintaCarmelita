@@ -23,7 +23,7 @@ public class SignedInActivity extends AppCompatActivity {
         btn_bs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(SignedInActivity.this, LogActivity.class);
+                Intent intent=new Intent(SignedInActivity.this, ProfileActivity.class);
                 startActivity(intent);
             }
         });
@@ -32,6 +32,11 @@ public class SignedInActivity extends AppCompatActivity {
     public void onLogout(View view) {
         FirebaseAuth.getInstance().signOut();
         startActivity(new Intent(this, RegisterActivity.class));
+    }
+
+    public void createKid(View view) {
+        Intent intent=new Intent(SignedInActivity.this, ProfileActivity.class);
+        startActivity(intent);
     }
 
     public void getUserInformation() {
