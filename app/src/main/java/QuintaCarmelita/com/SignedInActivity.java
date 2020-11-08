@@ -35,7 +35,7 @@ public class SignedInActivity extends AppCompatActivity {
     }
 
     public void createKid(View view) {
-        Intent intent=new Intent(SignedInActivity.this, ProfileActivity.class);
+        Intent intent=new Intent(SignedInActivity.this, ProfileCreateActivity.class);
         startActivity(intent);
     }
 
