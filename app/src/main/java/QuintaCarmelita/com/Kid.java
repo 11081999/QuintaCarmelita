@@ -2,13 +2,13 @@ package QuintaCarmelita.com;
 
 public class Kid {
     public String name;
-    public String age;
+    public int age;
 
     public Kid(){
         //public no-arg constructor needed
     }
 
-    public Kid(String name, String age){
+    public Kid(String name, int age){
         this.name= name;
         this.age= age;
     }
@@ -21,11 +21,11 @@ public class Kid {
         return name;
     }
 
-    public void setAge(String age){
+    public void setAge(int age){
         this.age=age;
     }
 
-    public String getAge(){
+    public int getAge(){
         return age;
     }
 
