@@ -4,16 +4,27 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
+import android.widget.SearchView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.util.ArrayList;
+
 public class SignedInActivity extends AppCompatActivity {
 
     Button btn_bs;
+
+    SearchView searchView;
+    ListView listView;
+    ArrayList list;
+    ArrayAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +36,37 @@ public class SignedInActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent=new Intent(SignedInActivity.this, ProfileActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        //
+
+        searchView = findViewById(R.id.searchView);
+        listView = findViewById(R.id.listView);
+        list = new ArrayList<>();
+        list.add("Apple");
+        list.add("Banana");
+        list.add("Pineapple");
+        list.add("Orange");
+        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,list);
+        listView.setAdapter(adapter);
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                if(list.contains(query)){
+                    adapter.getFilter().filter(query);
+                }else{
+                    Toast.makeText(SignedInActivity.this, "No Match found",Toast.LENGTH_LONG).show();
+                    listView.setVisibility(View.INVISIBLE);
+                }
+                return false;
+            }
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                adapter.getFilter().filter(newText);
+                listView.setVisibility(View.VISIBLE);
+                return false;
             }
         });
     }

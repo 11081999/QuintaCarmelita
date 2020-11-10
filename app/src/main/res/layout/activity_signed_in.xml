@@ -10,6 +10,21 @@
     android:background="@color/colorPrimary"
     android:padding="@dimen/activity_horizontal_margin"
 
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="197dp"
+        android:layout_height="300dp"
+        android:layout_below="@+id/searchView"
+        android:layout_marginStart="96dp"
+        android:layout_marginLeft="96dp"
+        android:layout_marginTop="108dp"
+        android:cacheColorHint="#FF0404"
+        android:divider="#ad5"
+        android:dividerHeight="2dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/buttonCreateKid"
         android:layout_width="wrap_content"
@@ -66,12 +81,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.098" />
 
-    <EditText
-        android:id="@+id/PersonName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginLeft="84dp"
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="197dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginLeft="96dp"
         android:layout_marginTop="68dp"
         android:ems="10"
         android:inputType="textPersonName"
@@ -79,6 +94,9 @@
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.032" />
+        app:layout_constraintVertical_bias="0.0"
+        android:queryHint="Search Here"
+        android:iconifiedByDefault="false"
+        android:layout_alignParentTop="true"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
