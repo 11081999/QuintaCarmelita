@@ -65,6 +65,7 @@ public class ProfileActivity extends AppCompatActivity {
                 String ageToString= Integer.toString(kidInfo.getAge());
                 updateProfileTextViewes(kidInfo.getName(),ageToString);
 
+                //Yolo
 
                 //fillArray(dataSnapshot);
 
