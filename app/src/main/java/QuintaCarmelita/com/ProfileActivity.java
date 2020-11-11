@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -22,6 +24,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 
 public class ProfileActivity extends AppCompatActivity {
+    private static final String[] Nombres = new String[]{
+        "Maria","Mario","Diana","Diego","Carla","Carlos","Mariana","Janeth","Jose"};
 
     //Real time database variables
     private FirebaseDatabase mFirebaseDatabaseInstance;
@@ -32,6 +36,9 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
+        AutoCompleteTextView edit =findViewById(R.id.autoCompleteTextView2);
+        ArrayAdapter<String> adapter= new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, Nombres);
+        edit.setAdapter(adapter);
         ///READING -----!
         //Instance Database
         mFirebaseDatabaseInstance= FirebaseDatabase.getInstance();

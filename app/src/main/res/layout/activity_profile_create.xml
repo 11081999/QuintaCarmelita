@@ -32,20 +32,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.932" />
 
-    <SearchView
-        android:id="@+id/editTextTextPersonName2"
-        android:layout_width="184dp"
-        android:layout_height="39dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginLeft="100dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.102" />
-
     <EditText
         android:id="@+id/kidName"
         android:layout_width="wrap_content"
@@ -73,5 +59,16 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="201dp"
         tools:layout_editor_absoluteY="320dp" />
+
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="68dp"
+        android:hint="Buscar Nombre"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
