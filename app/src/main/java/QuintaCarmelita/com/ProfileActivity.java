@@ -31,6 +31,10 @@ public class ProfileActivity extends AppCompatActivity {
     private FirebaseDatabase mFirebaseDatabaseInstance;
     private DatabaseReference mFireBaseDatabase;
 
+    private String inputKidNmae;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,14 +54,19 @@ public class ProfileActivity extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 //showFireBaseKidData(dataSnapshot);
                 Kid kidInfo = new Kid();
+                kidInfo.setName(dataSnapshot.child(inputKidNmae).getValue(Kid.class).getName());
+
                 kidInfo.setName(dataSnapshot.child("rob").getValue(Kid.class).getName());
+
                 kidInfo.setAge(dataSnapshot.child("rob").getValue(Kid.class).getAge());
                 System.out.println(kidInfo.getName());
                 System.out.println(kidInfo.getAge());
 
                 String ageToString= Integer.toString(kidInfo.getAge());
-
                 updateProfileTextViewes(kidInfo.getName(),ageToString);
+
+
+                //fillArray(dataSnapshot);
 
 
 
@@ -68,6 +77,24 @@ public class ProfileActivity extends AppCompatActivity {
 
             }
         });
+
+    }
+
+    public void fillArray(DataSnapshot dataSnapshot) {
+        for(DataSnapshot ds : dataSnapshot.getChildren()){
+            /*
+                Kid kidInfo = new Kid();
+                iteracion por todos los niños
+                llenas el arrray nombre con sus nobers
+
+                for(int i= 0; 0<array lenght; i++)
+                kidInfo.setName(ds.child( i ).getValue(Kid.class).getName());
+
+                ->kidInfo.setName(ds.getValue(Kid.class).getName());
+
+                nombres.add(kidInfo.getName())
+                */
+        }
 
     }
 
