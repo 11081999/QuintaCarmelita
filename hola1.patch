@@ -1,0 +1,125 @@
+Index: app/src/main/java/QuintaCarmelita/com/ProfileActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/QuintaCarmelita/com/ProfileActivity.java	(revision 0159191c82d8502a51c180411ca104c0535d3e32)
++++ app/src/main/java/QuintaCarmelita/com/ProfileActivity.java	(revision 81b8b1dd592800b2fb14ccb6c521a0adda74a574)
+@@ -4,6 +4,8 @@
+ import android.os.Bundle;
+ import android.util.Log;
+ import android.view.View;
++import android.widget.ArrayAdapter;
++import android.widget.AutoCompleteTextView;
+ import android.widget.EditText;
+ import android.widget.TextView;
+ 
+@@ -22,6 +24,8 @@
+ import java.util.ArrayList;
+ 
+ public class ProfileActivity extends AppCompatActivity {
++    private static final String[] Nombres = new String[]{
++        "Maria","Mario","Diana","Diego","Carla","Carlos","Mariana","Janeth","Jose"};
+ 
+     //Real time database variables
+     private FirebaseDatabase mFirebaseDatabaseInstance;
+@@ -32,6 +36,9 @@
+         super.onCreate(savedInstanceState);
+         setContentView(R.layout.activity_profile);
+ 
++        AutoCompleteTextView edit =findViewById(R.id.autoCompleteTextView2);
++        ArrayAdapter<String> adapter= new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, Nombres);
++        edit.setAdapter(adapter);
+         ///READING -----!
+         //Instance Database
+         mFirebaseDatabaseInstance= FirebaseDatabase.getInstance();
+Index: app/src/main/res/layout/activity_profile.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_profile.xml	(revision 0159191c82d8502a51c180411ca104c0535d3e32)
++++ app/src/main/res/layout/activity_profile.xml	(revision 81b8b1dd592800b2fb14ccb6c521a0adda74a574)
+@@ -47,20 +47,6 @@
+         app:layout_constraintTop_toTopOf="parent"
+         app:layout_constraintVertical_bias="0.924" />
+ 
+-    <EditText
+-        android:id="@+id/editTextTextPersonName2"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:layout_marginStart="100dp"
+-        android:layout_marginLeft="100dp"
+-        android:ems="10"
+-        android:inputType="textPersonName"
+-        android:text="Name"
+-        app:layout_constraintBottom_toBottomOf="parent"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="parent"
+-        app:layout_constraintVertical_bias="0.102" />
+-
+     <TextView
+         android:id="@+id/textViewName"
+         android:layout_width="wrap_content"
+@@ -89,4 +75,15 @@
+         tools:layout_editor_absoluteY="320dp"
+         />
+ 
++    <AutoCompleteTextView
++        android:id="@+id/autoCompleteTextView2"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:layout_marginStart="92dp"
++        android:layout_marginLeft="92dp"
++        android:layout_marginTop="68dp"
++        android:hint="Buscar Nombre"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent" />
++
+ </androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_profile_create.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/activity_profile_create.xml	(revision 0159191c82d8502a51c180411ca104c0535d3e32)
++++ app/src/main/res/layout/activity_profile_create.xml	(revision 81b8b1dd592800b2fb14ccb6c521a0adda74a574)
+@@ -32,20 +32,6 @@
+         app:layout_constraintTop_toTopOf="parent"
+         app:layout_constraintVertical_bias="0.932" />
+ 
+-    <SearchView
+-        android:id="@+id/editTextTextPersonName2"
+-        android:layout_width="184dp"
+-        android:layout_height="39dp"
+-        android:layout_marginStart="100dp"
+-        android:layout_marginLeft="100dp"
+-        android:ems="10"
+-        android:inputType="textPersonName"
+-        android:text="Name"
+-        app:layout_constraintBottom_toBottomOf="parent"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="parent"
+-        app:layout_constraintVertical_bias="0.102" />
+-
+     <EditText
+         android:id="@+id/kidName"
+         android:layout_width="wrap_content"
+@@ -74,4 +60,15 @@
+         tools:layout_editor_absoluteX="201dp"
+         tools:layout_editor_absoluteY="320dp" />
+ 
++    <AutoCompleteTextView
++        android:id="@+id/autoCompleteTextView"
++        android:layout_width="match_parent"
++        android:layout_height="wrap_content"
++        android:layout_marginStart="100dp"
++        android:layout_marginLeft="100dp"
++        android:layout_marginTop="68dp"
++        android:hint="Buscar Nombre"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent" />
++
+ </androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
