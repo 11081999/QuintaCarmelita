@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SearchView;
@@ -30,6 +31,15 @@ public class SignedInActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signed_in);
+
+        ArrayList<String> Nombre=new ArrayList<>();
+        Nombre.add("maria");
+        Nombre.add("mariana");
+        Nombre.add("mario");
+        AutoCompleteTextView edit =findViewById(R.id.autoCompleteTextView3);
+        ArrayAdapter<String> adapter1= new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, Nombre);
+        edit.setAdapter(adapter1);
+
         btn_bs =findViewById(R.id.button);
         btn_bs.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,13 +51,7 @@ public class SignedInActivity extends AppCompatActivity {
 
         //
 
-        searchView = findViewById(R.id.searchView);
-        listView = findViewById(R.id.listView);
-        list = new ArrayList<>();
-        list.add("Apple");
-        list.add("Banana");
-        list.add("Pineapple");
-        list.add("Orange");
+
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,list);
         listView.setAdapter(adapter);
 
