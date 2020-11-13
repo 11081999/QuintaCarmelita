@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -19,6 +20,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
@@ -26,6 +28,7 @@ import java.util.ArrayList;
 public class ProfileActivity extends AppCompatActivity {
     private static final String[] Nombres = new String[]{
         "Maria","Mario","Diana","Diego","Carla","Carlos","Mariana","Janeth","Jose"};
+    ArrayList<String> Nombre=new ArrayList<>();
 
     //Real time database variables
     private FirebaseDatabase mFirebaseDatabaseInstance;
@@ -40,42 +43,70 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-        AutoCompleteTextView edit =findViewById(R.id.autoCompleteTextView2);
-        ArrayAdapter<String> adapter= new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, Nombres);
-        edit.setAdapter(adapter);
-        ///READING -----!
-        //Instance Database
-        mFirebaseDatabaseInstance= FirebaseDatabase.getInstance();
-        // get reference to 'niños' node
-        mFireBaseDatabase = mFirebaseDatabaseInstance.getReference("Niños");
 
-        mFireBaseDatabase.addValueEventListener(new ValueEventListener() {
+        final ArrayList<String> red=new ArrayList<>();
+        final ArrayAdapter list=new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,red);
+        final AutoCompleteTextView text=findViewById(R.id.autoCompleteTextView2);
+        text.setAdapter(list);
+        DatabaseReference ref=FirebaseDatabase.getInstance().getReference().child("Niños");
+        ref.addValueEventListener(new ValueEventListener() {
             @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                //showFireBaseKidData(dataSnapshot);
-                Kid kidInfo = new Kid();
-                kidInfo.setName(dataSnapshot.child(inputKidNmae).getValue(Kid.class).getName());
-
-                kidInfo.setName(dataSnapshot.child("rob").getValue(Kid.class).getName());
-
-                kidInfo.setAge(dataSnapshot.child("rob").getValue(Kid.class).getAge());
-                System.out.println(kidInfo.getName());
-                System.out.println(kidInfo.getAge());
-
-                String ageToString= Integer.toString(kidInfo.getAge());
-                updateProfileTextViewes(kidInfo.getName(),ageToString);
-
-                //Yolo
-
-                //fillArray(dataSnapshot);
-
-
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                red.clear();
+                for (DataSnapshot snapshot:dataSnapshot.getChildren()){
+                    red.add(snapshot.getKey().toString());
+                }
+                list.notifyDataSetChanged();
 
             }
 
             @Override
-            public void onCancelled(DatabaseError databaseError) {
+            public void onCancelled(@NonNull DatabaseError error) {
 
+            }
+        });
+        ///READING -----!
+        //Instance Database
+        Button btn=(Button) findViewById(R.id.button2);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mFirebaseDatabaseInstance= FirebaseDatabase.getInstance();
+                // get reference to 'niños' node
+                mFireBaseDatabase = mFirebaseDatabaseInstance.getReference("Niños");
+
+                mFireBaseDatabase.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        //showFireBaseKidData(dataSnapshot);
+                        if (getIntent().getStringExtra("Valor")!= null){
+                            text.setText(getIntent().getStringExtra("Valor"));
+                        }
+                        Kid kidInfo = new Kid();
+                        //kidInfo.setName(dataSnapshot.child(inputKidNmae).getValue(Kid.class).getName());
+
+                        kidInfo.setName(dataSnapshot.child(text.getText().toString()).getValue(Kid.class).getName());
+
+                        kidInfo.setAge(dataSnapshot.child(text.getText().toString()).getValue(Kid.class).getAge());
+                        System.out.println(kidInfo.getName());
+                        System.out.println(kidInfo.getAge());
+
+                        String ageToString= Integer.toString(kidInfo.getAge());
+                        updateProfileTextViewes(kidInfo.getName(),ageToString);
+
+                        //Yolo
+
+                        //fillArray(dataSnapshot);
+
+
+
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+
+                    }
+                });
             }
         });
 
