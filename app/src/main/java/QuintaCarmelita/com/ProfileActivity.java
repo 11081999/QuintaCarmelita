@@ -36,12 +36,20 @@ public class ProfileActivity extends AppCompatActivity {
 
     private String inputKidNmae;
 
+    private ValueEventListener mListener;
+
+    Button buttonDelete;
+    Button buttonUpdate;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
+        buttonDelete= findViewById(R.id.button5);
+        buttonUpdate= findViewById(R.id.button3);
+
 
 
         final ArrayList<String> red=new ArrayList<>();
@@ -68,65 +76,61 @@ public class ProfileActivity extends AppCompatActivity {
         ///READING -----!
         //Instance Database
         Button btn=(Button) findViewById(R.id.button2);
-        btn.setOnClickListener(new View.OnClickListener() {
+        mFirebaseDatabaseInstance= FirebaseDatabase.getInstance();
+        // get reference to 'niños' node
+        mFireBaseDatabase = mFirebaseDatabaseInstance.getReference("Niños");
+        mListener= new ValueEventListener() {
             @Override
-            public void onClick(View v) {
-                mFirebaseDatabaseInstance= FirebaseDatabase.getInstance();
-                // get reference to 'niños' node
-                mFireBaseDatabase = mFirebaseDatabaseInstance.getReference("Niños");
-
-                mFireBaseDatabase.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-                        //showFireBaseKidData(dataSnapshot);
-                        if (getIntent().getStringExtra("Valor")!= null){
-                            text.setText(getIntent().getStringExtra("Valor"));
-                        }
-                        Kid kidInfo = new Kid();
-                        //kidInfo.setName(dataSnapshot.child(inputKidNmae).getValue(Kid.class).getName());
-
-                        kidInfo.setName(dataSnapshot.child(text.getText().toString()).getValue(Kid.class).getName());
-
-                        kidInfo.setAge(dataSnapshot.child(text.getText().toString()).getValue(Kid.class).getAge());
-                        System.out.println(kidInfo.getName());
-                        System.out.println(kidInfo.getAge());
-
-                        String ageToString= Integer.toString(kidInfo.getAge());
-                        updateProfileTextViewes(kidInfo.getName(),ageToString);
-
-                        //Yolo
-
-                        //fillArray(dataSnapshot);
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                //showFireBaseKidData(dataSnapshot);
+                if (getIntent().getStringExtra("Valor")!= null){
+                    text.setText(getIntent().getStringExtra("Valor"));
+                }
 
 
 
-                    }
+                Kid kidInfo = new Kid();
+                //kidInfo.setName(dataSnapshot.child(inputKidNmae).getValue(Kid.class).getName());
 
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
+                kidInfo.setName(dataSnapshot.child(text.getText().toString()).getValue(Kid.class).getName());
 
-                    }
-                });
+                kidInfo.setAge(dataSnapshot.child(text.getText().toString()).getValue(Kid.class).getAge());
+                System.out.println(kidInfo.getName());
+                System.out.println(kidInfo.getAge());
+
+                inputKidNmae= text.getText().toString();
+
+                String ageToString= Integer.toString(kidInfo.getAge());
+                updateProfileTextViewes(kidInfo.getName(),ageToString);
+
+                //Yolo
+
+                //fillArray(dataSnapshot);
+
+
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        };
+
+        mFireBaseDatabase.addValueEventListener(mListener);
+
+        buttonDelete.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+                eliminateKidProfileOnFirebaseDatabase(inputKidNmae);
             }
         });
 
-    }
+        buttonUpdate.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+                updateKidProfileOnFirebaseDatabase(inputKidNmae);
+            }
+        });
 
-    public void fillArray(DataSnapshot dataSnapshot) {
-        for(DataSnapshot ds : dataSnapshot.getChildren()){
-            /*
-                Kid kidInfo = new Kid();
-                iteracion por todos los niños
-                llenas el arrray nombre con sus nobers
-
-                for(int i= 0; 0<array lenght; i++)
-                kidInfo.setName(ds.child( i ).getValue(Kid.class).getName());
-
-                ->kidInfo.setName(ds.getValue(Kid.class).getName());
-
-                nombres.add(kidInfo.getName())
-                */
-        }
 
     }
 
@@ -138,33 +142,18 @@ public class ProfileActivity extends AppCompatActivity {
         profileKidAge.setText(ageOfKid);
     }
 
-    public void updateKidProfileOnFirebaseDatabase() {
-        //UPDATE
-        //mFirebaseDatabaseInstance.getReference("Niños").child("rob").child("name").setValue("rob2");
-        //or
-        //mFireBaseDatabase.child("rob").child("name").setValue("rob2");
+
+    public void updateKidProfileOnFirebaseDatabase(String key) {
+        DatabaseReference drKid = FirebaseDatabase.getInstance().getReference().child("Niños").child(key).child("name");
+        drKid.setValue("rob2");
     }
 
-    public void eliminateKidProfileOnFirebaseDatabase() {
-        //Delete
-        //mFirebaseDatabaseInstance.getReference("Niños").child("rob").removeValue();
-        //or
-        //mFireBaseDatabase.child("rob").removeValue();
+    public void eliminateKidProfileOnFirebaseDatabase(String key) {
+        //mFireBaseDatabase.removeEventListener(mListener);
+        DatabaseReference drKid = FirebaseDatabase.getInstance().getReference().child("Niños").child(key);
+        drKid.removeValue();
+        Intent intent=new Intent(ProfileActivity.this, SignedInActivity.class);
+        startActivity(intent);
     }
 
-    public void showFireBaseKidData(DataSnapshot dataSnapshot){
-        for(DataSnapshot ds : dataSnapshot.getChildren()){
-            //kidInfo.setName(ds.child("rob").getValue(Kid.class).getName());
-            //kidInfo.setAge(ds.child("rob").getValue(Kid.class).getAge());
-
-            //profileDisplayInformation.add(kidInfo.getName());
-            //profileDisplayInformation.add(kidInfo.getAge());
-
-
-
-
-            //TextView profileKidAge = (TextView)findViewById(R.id.textViewAge);
-            //profileKidAge.setText(kidInfo.getAge());
-        }
-    }
 }
