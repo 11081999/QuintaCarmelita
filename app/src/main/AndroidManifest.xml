@@ -25,6 +25,11 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".SignedInActivity" />
         <activity android:name=".ProfileCreateActivity" />
+        <activity android:name=".ProfileMenuActivity" />
+        <activity android:name=".ProfileDatosGenerales" />
+        <activity android:name=".ProfilePerfilMedico" />
+        <activity android:name=".ProfileBitacora" />
+
     </application>
 
 </manifest>
