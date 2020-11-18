@@ -68,9 +68,12 @@ public class SignedInActivity extends AppCompatActivity {
         btn_bs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                /*
                 Intent intent=new Intent(SignedInActivity.this, ProfileActivity.class);
                 intent.putExtra("Valor",text.getText().toString());
                 startActivity(intent);
+                 */
+
             }
         });
     }
@@ -81,7 +84,11 @@ public class SignedInActivity extends AppCompatActivity {
     }
 
     public void createKid(View view) {
-        Intent intent=new Intent(SignedInActivity.this, ProfileCreateActivity.class);
+        //Intent intent=new Intent(SignedInActivity.this, ProfileCreateActivity.class);
+        //startActivity(intent);
+
+        //TEMPORALMENTE AÑADIDO PARA PROBAR LAS ACTIVIDADES
+        Intent intent=new Intent(SignedInActivity.this, ProfileMenuActivity.class);
         startActivity(intent);
     }
 

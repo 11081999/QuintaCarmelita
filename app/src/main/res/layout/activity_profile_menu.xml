@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/perfil_menu"
+    tools:context="QuintaCarmelita.com.ProfileMenuActivity">
+
+    <Button
+        android:id="@+id/butttonDatosGenerales"
+        android:onClick="clickedButtonDatosGenerales"
+        android:layout_width="181dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginLeft="124dp"
+        android:alpha="0.0"
+        android:background="@color/colorAccent"
+        android:text="@string/btn_login"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4" />
+
+    <Button
+        android:id="@+id/buttonPerfilMedico"
+        android:onClick="clickedbuttonPerfilMedico"
+        android:layout_width="181dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginLeft="124dp"
+        android:alpha="0.0"
+        android:background="@color/colorAccent"
+        android:text="@string/btn_login"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.478" />
+
+    <Button
+        android:id="@+id/buttonCalendario"
+        android:onClick="clickedbuttonCalendario"
+        android:layout_width="181dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginLeft="124dp"
+        android:alpha="0.0"
+        android:background="@color/colorAccent"
+        android:text="@string/btn_login"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.556" />
+
+    <Button
+        android:id="@+id/buttonBitacora"
+        android:onClick="clickedbuttonBitacora"
+        android:layout_width="181dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginLeft="124dp"
+        android:alpha="0.0"
+        android:background="@color/colorAccent"
+        android:text="@string/btn_login"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.623" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
