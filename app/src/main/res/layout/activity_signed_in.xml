@@ -7,8 +7,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/busqueda"
     tools:context="QuintaCarmelita.com.SignedInActivity">
-    android:background="@color/colorPrimary"
-    android:padding="@dimen/activity_horizontal_margin"
 
     <Button
         android:id="@+id/buttonCreateKid"
@@ -44,7 +42,7 @@
         android:layout_marginTop="175dp"
         android:layout_marginBottom="23dp"
         android:gravity="center_vertical|center_horizontal|center"
-        android:text="You have successfully logged in or registered"
+        android:text=""
         android:textColor="@color/bg_login"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/logout"
@@ -73,7 +71,6 @@
         android:layout_marginStart="88dp"
         android:layout_marginLeft="88dp"
         android:layout_marginTop="68dp"
-        android:hint="Nombre"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
