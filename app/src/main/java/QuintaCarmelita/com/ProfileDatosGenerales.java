@@ -33,6 +33,8 @@ public class ProfileDatosGenerales  extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         // set the view now
         setContentView(R.layout.activity_profile_datosgenerales);
+        AutoCompleteTextView tv=(AutoCompleteTextView) findViewById(R.id.autoCompleteTextView6);
+        tv.setText(getIntent().getStringExtra("NOM"));
     }
 
     @Override

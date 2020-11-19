@@ -34,6 +34,8 @@ public class ProfileBitacora  extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         // set the view now
         setContentView(R.layout.activity_profile_bitacora);
+        AutoCompleteTextView tv=(AutoCompleteTextView) findViewById(R.id.autoCompleteTextView7);
+        tv.setText(getIntent().getStringExtra("NOM"));
     }
 
     @Override

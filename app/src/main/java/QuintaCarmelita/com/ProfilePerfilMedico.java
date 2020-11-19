@@ -32,7 +32,14 @@ public class ProfilePerfilMedico  extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // set the view now
+        EditText name=(EditText) findViewById(R.id.MedNom);
+        EditText sur=(EditText) findViewById(R.id.MedSur);
+        String string1=name.toString();
+        String string2=sur.toString();
+        String full=string1+" "+string2; //Nombre y apellido juntos
         setContentView(R.layout.activity_profile_perfilmedico);
+        AutoCompleteTextView tv=(AutoCompleteTextView) findViewById(R.id.autoCompleteTextView5);
+        tv.setText(getIntent().getStringExtra("NOM"));
     }
 
     @Override

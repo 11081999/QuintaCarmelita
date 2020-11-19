@@ -51,7 +51,7 @@ public class SignedInActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 red.clear();
                 for (DataSnapshot snapshot:dataSnapshot.getChildren()){
-                    red.add(snapshot.getKey().toString());
+                    red.add(snapshot.getKey());
 
                 }
                 list.notifyDataSetChanged();
@@ -63,11 +63,17 @@ public class SignedInActivity extends AppCompatActivity {
 
             }
         });
-
-        btn_bs =findViewById(R.id.button);
+        Button btn_bs =findViewById(R.id.button);
         btn_bs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent=new Intent(SignedInActivity.this, ProfileActivity.class);
+                startActivity(intent);
+
+        //btn_bs =findViewById(R.id.button);
+        //btn_bs.setOnClickListener(new View.OnClickListener() {
+           // @Override
+           // public void onClick(View v) {
                 /*
                 Intent intent=new Intent(SignedInActivity.this, ProfileActivity.class);
                 intent.putExtra("Valor",text.getText().toString());
