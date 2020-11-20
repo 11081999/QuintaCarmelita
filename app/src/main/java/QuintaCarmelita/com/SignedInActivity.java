@@ -90,11 +90,7 @@ public class SignedInActivity extends AppCompatActivity {
     }
 
     public void createKid(View view) {
-        //Intent intent=new Intent(SignedInActivity.this, ProfileCreateActivity.class);
-        //startActivity(intent);
-
-        //TEMPORALMENTE AÑADIDO PARA PROBAR LAS ACTIVIDADES
-        Intent intent=new Intent(SignedInActivity.this, ProfileMenuActivity.class);
+        Intent intent=new Intent(SignedInActivity.this, ProfileCreateActivity.class);
         startActivity(intent);
     }
 
