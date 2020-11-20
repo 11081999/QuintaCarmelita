@@ -133,8 +133,8 @@ public class ProfilePerfilMedico  extends AppCompatActivity {
         TextView profileKidKidPsicologoEncargado = (TextView)findViewById(R.id.MedSur);
         profileKidKidPsicologoEncargado.setText(displayKidPsicologoEncargado);
 
-        TextView profileKidKidAlergias = (TextView)findViewById(R.id.Med1);
-        profileKidKidAlergias.setText(displayKidAlergias);
+        //TextView profileKidKidAlergias = (TextView)findViewById(R.id.Med1);
+        //profileKidKidAlergias.setText(displayKidAlergias);
 
         TextView profileKidMedicamentos = (TextView)findViewById(R.id.Med2);
         profileKidMedicamentos.setText(displayKidMedicamentos);
