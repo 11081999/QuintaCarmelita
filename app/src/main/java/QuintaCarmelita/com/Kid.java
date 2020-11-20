@@ -8,12 +8,15 @@ public class Kid {
     public String talla;
     public String fechaDeIngreso;
     public String fechaDeLLegada;
+    public String fechaDeNacimiento;
     public String status;
     //Datos Médicos
     public String alergias;
     public String medicamentos;
     public String reporteDoctores;
     public String reportePsicologo;
+    public String doctorEncargado;
+    public String psicologoEncargdo;
     //Calendario
     //Bitácora
     public String conductasPositivas;
@@ -28,9 +31,9 @@ public class Kid {
         //public no-arg constructor needed
     }
 
-    public Kid(String name, int age, double peso, String talla, String fechaDeIngreso, String fechaDeLLegada,
-               String status, String alergias, String medicamentos, String reporteDoctores, String reportePsicologo,
-               String conductasPositivas, String conductasNegativas, String incidentes, String areaFisica,
+    public Kid(String name, int age, double peso, String talla, String fechaDeIngreso, String fechaDeLLegada, String fechaDeNacimiento,
+               String status, String alergias, String medicamentos, String reporteDoctores, String reportePsicologo, String doctorEncargado,
+               String psicologoEncargdo,String conductasPositivas, String conductasNegativas, String incidentes, String areaFisica,
                String consecuencias, String comentarios){
         this.name= name;
         this.age= age;
@@ -39,12 +42,15 @@ public class Kid {
         this.talla= talla;
         this.fechaDeIngreso= fechaDeIngreso;
         this.fechaDeLLegada= fechaDeLLegada;
+        this.fechaDeNacimiento= fechaDeNacimiento;
         this. status= status;
         //Datos Médicos
         this.alergias= alergias;
         this.medicamentos= medicamentos;
         this.reporteDoctores= reporteDoctores;
         this.reportePsicologo= reportePsicologo;
+        this.doctorEncargado= doctorEncargado;
+        this.psicologoEncargdo= psicologoEncargdo;
         //Calendario
         //Bitácora
         this.conductasPositivas= conductasPositivas;
@@ -100,8 +106,17 @@ public class Kid {
         return fechaDeLLegada;
     }
 
+
     public void setFechaDeLLegada(String fechaDeLLegada) {
         this.fechaDeLLegada = fechaDeLLegada;
+    }
+
+    public String getFechaDeNacimiento() {
+        return fechaDeNacimiento;
+    }
+
+    public void setFechaDeNacimiento(String fechaDeNacimiento) {
+        this.fechaDeNacimiento = fechaDeNacimiento;
     }
 
     public String getStatus() {
@@ -142,6 +157,22 @@ public class Kid {
 
     public void setReportePsicologo(String reportePsicologo) {
         this.reportePsicologo = reportePsicologo;
+    }
+
+    public String getDoctorEncargado() {
+        return doctorEncargado;
+    }
+
+    public void setDoctorEncargado(String doctorEncargado) {
+        this.doctorEncargado = doctorEncargado;
+    }
+
+    public String getPsicologoEncargdo() {
+        return psicologoEncargdo;
+    }
+
+    public void setPsicologoEncargdo(String psicologoEncargdo) {
+        this.psicologoEncargdo = psicologoEncargdo;
     }
 
     public String getConductasPositivas() {

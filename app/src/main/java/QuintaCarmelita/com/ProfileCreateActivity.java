@@ -88,10 +88,10 @@ public class ProfileCreateActivity extends AppCompatActivity {
         //Referance to the user
         mFireBaseDatabase= mFirebaseDatabaseInstance.getReference("Niños");
 
-        Kid currentKid= new Kid(nameInput.toString(), ageInput, 0.00001, "vacio", "vacio", "vacio",
-                "vacio", "vacio", "vacio", "vacio", "vacio",
+        Kid currentKid= new Kid(nameInput.toString(), ageInput, 0.1, "vacio", "vacio", "vacio",
+                "vacio", "vacio", "vacio", "vacio", "vacio", "vacio",
                 "vacio", "vacio", "vacio", "vacio",
-                "vacio", "vacio");;
+                "vacio", "vacio", "vacio", "vacio");;
         kidId= currentKid.getName();
 
         mFireBaseDatabase.child(kidId).setValue(currentKid);

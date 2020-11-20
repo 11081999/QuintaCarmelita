@@ -67,11 +67,11 @@ public class SignedInActivity extends AppCompatActivity {
         btn_bs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(SignedInActivity.this, ProfileActivity.class);
+                Intent intent=new Intent(SignedInActivity.this, ProfileMenuActivity.class);
                 startActivity(intent);
 
-        //btn_bs =findViewById(R.id.button);
-        //btn_bs.setOnClickListener(new View.OnClickListener() {
+            //btn_bs =findViewById(R.id.button);
+            //btn_bs.setOnClickListener(new View.OnClickListener() {
            // @Override
            // public void onClick(View v) {
                 /*
