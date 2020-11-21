@@ -68,6 +68,7 @@ public class SignedInActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(SignedInActivity.this, ProfileMenuActivity.class);
+                intent.putExtra("NOM",text.getText().toString());
                 startActivity(intent);
 
             //btn_bs =findViewById(R.id.button);

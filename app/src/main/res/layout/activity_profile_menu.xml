@@ -57,11 +57,10 @@
 
     <Button
         android:id="@+id/buttonBitacora"
-        android:onClick="clickedbuttonBitacora"
         android:layout_width="181dp"
         android:layout_height="46dp"
-        android:layout_marginStart="124dp"
-        android:layout_marginLeft="124dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginLeft="112dp"
         android:alpha="0.0"
         android:background="@color/colorAccent"
         android:text="@string/btn_login"
@@ -69,7 +68,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.623" />
+        app:layout_constraintVertical_bias="0.633" />
 
     <AutoCompleteTextView
         android:id="@+id/autoCompleteTextView4"

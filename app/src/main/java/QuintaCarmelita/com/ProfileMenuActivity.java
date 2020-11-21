@@ -110,8 +110,8 @@ public class ProfileMenuActivity  extends AppCompatActivity {
     }
 
     public void clickedbuttonBitacora(View view) {
-        Intent intent=new Intent(ProfileMenuActivity.this, ProfileBitacora.class);
-        startActivity(intent);
+        //Intent intent=new Intent(ProfileMenuActivity.this, ProfileBitacora.class);
+        //startActivity(intent);
     }
 }
 
