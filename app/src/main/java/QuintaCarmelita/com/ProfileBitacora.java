@@ -135,7 +135,7 @@ public class ProfileBitacora  extends AppCompatActivity {
         TextView profileKidKidConductasNegativas = (TextView)findViewById(R.id.Bit2);
         profileKidKidConductasNegativas.setText(displayConductasNegativas);
 
-        TextView profileKidIncidentes = (TextView)findViewById(R.id.Bit3);
+        TextView profileKidIncidentes = (TextView)findViewById(R.id.Bitacora3);
         profileKidIncidentes.setText(displayIncidentes);
 
         TextView profileKidAreaFisica = (TextView)findViewById(R.id.Bit4);
@@ -158,8 +158,8 @@ public class ProfileBitacora  extends AppCompatActivity {
         TextView profileKidKidConductasNegativas = (TextView)findViewById(R.id.Bit2);
         drKid.child("conductasNegativas").setValue(profileKidKidConductasNegativas.getText().toString());
 
-        TextView profileKidInc = (TextView)findViewById(R.id.Bit3);
-        drKid.child("incidentes").setValue(profileKidInc);
+        TextView profileKidInc = (TextView)findViewById(R.id.Bitacora3);
+        drKid.child("incidentes").setValue(profileKidInc.getText().toString());
 
         TextView profileKidAreaFisica = (TextView)findViewById(R.id.Bit4);
         drKid.child("areaFisica").setValue(profileKidAreaFisica.getText().toString());
