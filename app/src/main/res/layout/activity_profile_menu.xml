@@ -41,7 +41,6 @@
 
     <Button
         android:id="@+id/buttonCalendario"
-        android:onClick="clickedbuttonCalendario"
         android:layout_width="181dp"
         android:layout_height="46dp"
         android:layout_marginStart="124dp"

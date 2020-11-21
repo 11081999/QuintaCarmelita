@@ -49,11 +49,11 @@ public class ProfileBitacora  extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         // set the view now
         setContentView(R.layout.activity_profile_bitacora);
-        AutoCompleteTextView tv=(AutoCompleteTextView) findViewById(R.id.autoCompleteTextView7);
+        final AutoCompleteTextView tv=(AutoCompleteTextView) findViewById(R.id.autoCompleteTextView7);
         tv.setText(getIntent().getStringExtra("NOM"));
 
         //buttonDelete= findViewById(R.id.button5);
-        buttonUpdate= findViewById(R.id.saveMed);
+        buttonUpdate= findViewById(R.id.button4);
 
         mFirebaseDatabaseInstance= FirebaseDatabase.getInstance();
         // get reference to 'niños' node
@@ -62,11 +62,11 @@ public class ProfileBitacora  extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 //showFireBaseKidData(dataSnapshot);
-                if (getIntent().getStringExtra("Valor") != null) {
-                    //text.setText(getIntent().getStringExtra("Valor"));
+                if (getIntent().getStringExtra("Valor")!= null){
+                    tv.setText(getIntent().getStringExtra("Valor"));
                 }
 
-                inputKidNmae = "rob";
+                inputKidNmae = tv.getText().toString();
 
                 Kid kidInfo = new Kid();
                 kidInfo.setName(dataSnapshot.child(inputKidNmae).getValue(Kid.class).getName());
@@ -114,6 +114,8 @@ public class ProfileBitacora  extends AppCompatActivity {
                 updateKidProfileOnFirebaseDatabase(inputKidNmae);
             }
         });
+
+
     }
 
     @Override
@@ -149,25 +151,25 @@ public class ProfileBitacora  extends AppCompatActivity {
 
     public void updateKidProfileOnFirebaseDatabase(String key) {
         DatabaseReference drKid = FirebaseDatabase.getInstance().getReference().child("Niños").child(key);
-/*
-        TextView profileKidDoctorEncargado = (TextView)findViewById(R.id.MedNom);
-        drKid.child("doctorEncargado").setValue(profileKidDoctorEncargado.getText().toString());
 
-        TextView profileKidKidPsicologoEncargado = (TextView)findViewById(R.id.MedSur);
-        drKid.child("psicologoEncargdo").setValue(profileKidKidPsicologoEncargado.getText().toString());
+        TextView profileKidConductasPositivas = (TextView)findViewById(R.id.Bit1);
+        drKid.child("conductasPositivas").setValue(profileKidConductasPositivas.getText().toString());
 
-        TextView profileKidKidAlergias = (TextView)findViewById(R.id.Med1);
-        drKid.child("alergias").setValue(profileKidKidAlergias);
+        TextView profileKidKidConductasNegativas = (TextView)findViewById(R.id.Bit2);
+        drKid.child("conductasNegativas").setValue(profileKidKidConductasNegativas.getText().toString());
 
-        TextView profileKidMedicamentos = (TextView)findViewById(R.id.Med2);
-        drKid.child("medicamentos").setValue(profileKidMedicamentos.getText().toString());
+        TextView profileKidInc = (TextView)findViewById(R.id.Bit3);
+        drKid.child("incidentes").setValue(profileKidInc);
 
-        TextView profileKidFechaDeLlegada = (TextView)findViewById(R.id.Med3);
-        drKid.child("reporteDoctores").setValue(profileKidFechaDeLlegada.getText().toString());
+        TextView profileKidAreaFisica = (TextView)findViewById(R.id.Bit4);
+        drKid.child("areaFisica").setValue(profileKidAreaFisica.getText().toString());
 
-        TextView profileKidReporteDoctor = (TextView)findViewById(R.id.Med4);
-        drKid.child("reportePsicologo").setValue(profileKidReporteDoctor.getText().toString());
-*/
+        TextView profileKidConsecuencias = (TextView)findViewById(R.id.Bit5);
+        drKid.child("consecuencias").setValue(profileKidConsecuencias.getText().toString());
+
+        TextView profileKidComentarios = (TextView)findViewById(R.id.Bit6);
+        drKid.child("comentarios").setValue(profileKidComentarios.getText().toString());
+
 
     }
 

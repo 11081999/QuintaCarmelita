@@ -50,7 +50,7 @@ public class ProfilePerfilMedico  extends AppCompatActivity {
         //String string2=sur.toString();
         //String full=string1+" "+string2; //Nombre y apellido juntos
         setContentView(R.layout.activity_profile_perfilmedico);
-        AutoCompleteTextView tv=(AutoCompleteTextView) findViewById(R.id.autoCompleteTextView5);
+        final AutoCompleteTextView tv=(AutoCompleteTextView) findViewById(R.id.autoCompleteTextView5);
         tv.setText(getIntent().getStringExtra("NOM"));
         //buttonDelete= findViewById(R.id.button5);
         buttonUpdate= findViewById(R.id.saveMed);
@@ -62,24 +62,25 @@ public class ProfilePerfilMedico  extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 //showFireBaseKidData(dataSnapshot);
-                if (getIntent().getStringExtra("Valor") != null) {
-                    //text.setText(getIntent().getStringExtra("Valor"));
+                if (getIntent().getStringExtra("Valor")!= null){
+                    tv.setText(getIntent().getStringExtra("Valor"));
                 }
+
+                inputKidNmae = tv.getText().toString();
 
                 Kid kidInfo = new Kid();
                 //kidInfo.setName(dataSnapshot.child(inputKidNmae).getValue(Kid.class).getName());
 
-                kidInfo.setDoctorEncargado(dataSnapshot.child("rob").getValue(Kid.class).getDoctorEncargado());
-                kidInfo.setPsicologoEncargdo(dataSnapshot.child("rob").getValue(Kid.class).getPsicologoEncargdo());
-                kidInfo.setAlergias(dataSnapshot.child("rob").getValue(Kid.class).getAlergias());
-                kidInfo.setMedicamentos(dataSnapshot.child("rob").getValue(Kid.class).getMedicamentos());
-                kidInfo.setReporteDoctores(dataSnapshot.child("rob").getValue(Kid.class).getReporteDoctores());
-                kidInfo.setReportePsicologo(dataSnapshot.child("rob").getValue(Kid.class).getReportePsicologo());
+                kidInfo.setDoctorEncargado(dataSnapshot.child(inputKidNmae).getValue(Kid.class).getDoctorEncargado());
+                kidInfo.setPsicologoEncargdo(dataSnapshot.child(inputKidNmae).getValue(Kid.class).getPsicologoEncargdo());
+                kidInfo.setAlergias(dataSnapshot.child(inputKidNmae).getValue(Kid.class).getAlergias());
+                kidInfo.setMedicamentos(dataSnapshot.child(inputKidNmae).getValue(Kid.class).getMedicamentos());
+                kidInfo.setReporteDoctores(dataSnapshot.child(inputKidNmae).getValue(Kid.class).getReporteDoctores());
+                kidInfo.setReportePsicologo(dataSnapshot.child(inputKidNmae).getValue(Kid.class).getReportePsicologo());
 
                 //inputKidNmae= text.getText().toString();
                 //Fill variables
                 //inputKidNmae= kidInfo.getName();
-                inputKidNmae = "rob";
                 displayKidDoctorEncargado= kidInfo.getDoctorEncargado();
                 displayKidPsicologoEncargado= kidInfo.getPsicologoEncargdo();
                 displayKidAlergias= kidInfo.getAlergias();
@@ -133,8 +134,8 @@ public class ProfilePerfilMedico  extends AppCompatActivity {
         TextView profileKidKidPsicologoEncargado = (TextView)findViewById(R.id.MedSur);
         profileKidKidPsicologoEncargado.setText(displayKidPsicologoEncargado);
 
-        //TextView profileKidKidAlergias = (TextView)findViewById(R.id.Med1);
-        //profileKidKidAlergias.setText(displayKidAlergias);
+        TextView profileKidKidAlergias = (TextView)findViewById(R.id.Med1);
+        profileKidKidAlergias.setText(displayKidAlergias);
 
         TextView profileKidMedicamentos = (TextView)findViewById(R.id.Med2);
         profileKidMedicamentos.setText(displayKidMedicamentos);
@@ -159,8 +160,8 @@ public class ProfilePerfilMedico  extends AppCompatActivity {
         TextView profileKidKidPsicologoEncargado = (TextView)findViewById(R.id.MedSur);
         drKid.child("psicologoEncargdo").setValue(profileKidKidPsicologoEncargado.getText().toString());
 
-        TextView profileKidKidAlergias = (TextView)findViewById(R.id.Med1);
-        drKid.child("alergias").setValue(profileKidKidAlergias);
+        //TextView profileKidKidAlergias = (TextView)findViewById(R.id.Med1);
+        //drKid.child("alergias").setValue(profileKidKidAlergias);
 
         TextView profileKidMedicamentos = (TextView)findViewById(R.id.Med2);
         drKid.child("medicamentos").setValue(profileKidMedicamentos.getText().toString());

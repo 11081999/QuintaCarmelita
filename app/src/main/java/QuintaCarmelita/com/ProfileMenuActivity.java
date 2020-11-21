@@ -1,4 +1,3 @@
-
 package QuintaCarmelita.com;
 
 import android.content.Intent;
@@ -38,6 +37,7 @@ public class ProfileMenuActivity  extends AppCompatActivity {
         final ArrayAdapter list=new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,red);
         final AutoCompleteTextView text=findViewById(R.id.autoCompleteTextView4);
         text.setAdapter(list);
+        text.setText(getIntent().getStringExtra("NOM"));
         DatabaseReference ref=FirebaseDatabase.getInstance().getReference().child("Niños");
         ref.addValueEventListener(new ValueEventListener() {
             @Override

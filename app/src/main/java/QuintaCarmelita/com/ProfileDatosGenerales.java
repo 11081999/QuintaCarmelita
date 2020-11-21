@@ -44,7 +44,7 @@ public class ProfileDatosGenerales  extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         // set the view now
         setContentView(R.layout.activity_profile_datosgenerales);
-        AutoCompleteTextView tv=(AutoCompleteTextView) findViewById(R.id.autoCompleteTextView6);
+        final AutoCompleteTextView tv=(AutoCompleteTextView) findViewById(R.id.autoCompleteTextView6);
         tv.setText(getIntent().getStringExtra("NOM"));
 
         //buttonDelete= findViewById(R.id.button5);
@@ -58,25 +58,26 @@ public class ProfileDatosGenerales  extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 //showFireBaseKidData(dataSnapshot);
                 if (getIntent().getStringExtra("Valor")!= null){
-                    //text.setText(getIntent().getStringExtra("Valor"));
+                    tv.setText(getIntent().getStringExtra("Valor"));
                 }
+
+                inputKidNmae = tv.getText().toString();
 
                 Kid kidInfo = new Kid();
                 //kidInfo.setName(dataSnapshot.child(inputKidNmae).getValue(Kid.class).getName());
 
-                kidInfo.setName(dataSnapshot.child("rob").getValue(Kid.class).getName());
-                kidInfo.setAge(dataSnapshot.child("rob").getValue(Kid.class).getAge());
-                kidInfo.setFechaDeNacimiento(dataSnapshot.child("rob").getValue(Kid.class).getFechaDeNacimiento());
-                kidInfo.setFechaDeIngreso(dataSnapshot.child("rob").getValue(Kid.class).getFechaDeIngreso());
-                kidInfo.setFechaDeLLegada(dataSnapshot.child("rob").getValue(Kid.class).getFechaDeLLegada());
-                kidInfo.setStatus(dataSnapshot.child("rob").getValue(Kid.class).getStatus());
-                kidInfo.setTalla(dataSnapshot.child("rob").getValue(Kid.class).getTalla());
-                kidInfo.setPeso(dataSnapshot.child("rob").getValue(Kid.class).getPeso());
+                kidInfo.setName(dataSnapshot.child(inputKidNmae).getValue(Kid.class).getName());
+                kidInfo.setAge(dataSnapshot.child(inputKidNmae).getValue(Kid.class).getAge());
+                kidInfo.setFechaDeNacimiento(dataSnapshot.child(inputKidNmae).getValue(Kid.class).getFechaDeNacimiento());
+                kidInfo.setFechaDeIngreso(dataSnapshot.child(inputKidNmae).getValue(Kid.class).getFechaDeIngreso());
+                kidInfo.setFechaDeLLegada(dataSnapshot.child(inputKidNmae).getValue(Kid.class).getFechaDeLLegada());
+                kidInfo.setStatus(dataSnapshot.child(inputKidNmae).getValue(Kid.class).getStatus());
+                kidInfo.setTalla(dataSnapshot.child(inputKidNmae).getValue(Kid.class).getTalla());
+                kidInfo.setPeso(dataSnapshot.child(inputKidNmae).getValue(Kid.class).getPeso());
 
                 //inputKidNmae= text.getText().toString();
                 //Fill variables
                 //inputKidNmae= kidInfo.getName();
-                inputKidNmae= "rob";
                 displayeKidNacimineto= kidInfo.getFechaDeNacimiento();
                 displayKidFechaDeIngreso= kidInfo.getFechaDeIngreso();
                 displayKidFechaDeLlegada= kidInfo.getFechaDeLLegada();
