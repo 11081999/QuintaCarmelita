@@ -26,7 +26,7 @@ public class ProfileCreateActivity extends AppCompatActivity {
 
 
 
-    //Real time database variables
+    //Real time database variabless
     private FirebaseDatabase mFirebaseDatabaseInstance;
     private DatabaseReference mFireBaseDatabase;
 
