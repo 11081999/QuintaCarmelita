@@ -36,81 +36,82 @@
 
     <EditText
         android:id="@+id/MedNom"
-        android:layout_width="152dp"
-        android:layout_height="46dp"
+        android:layout_width="112dp"
+        android:layout_height="38dp"
         android:layout_marginTop="216dp"
-        android:layout_marginEnd="68dp"
-        android:layout_marginRight="68dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Nombre"
+        android:hint="Doctor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/MedSur"
-        android:layout_width="158dp"
-        android:layout_height="49dp"
+        android:layout_width="105dp"
+        android:layout_height="33dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="68dp"
         android:layout_marginRight="68dp"
         android:ems="10"
+        android:hint="Psicologo"
         android:inputType="text"
-        android:hint="Apellido"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/MedNom" />
 
     <EditText
         android:id="@+id/Med1"
-        android:layout_width="299dp"
-        android:layout_height="44dp"
+        android:layout_width="209dp"
+        android:layout_height="37dp"
         android:layout_marginBottom="20dp"
         android:ems="10"
+        android:hint="Alergias"
         android:inputType="text"
-        android:hint="Name"
         app:layout_constraintBottom_toTopOf="@+id/Med2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.702"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/MedSur"
         app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/Med2"
-        android:layout_width="270dp"
-        android:layout_height="43dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="193dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="40dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Name"
+        android:hint="Medicamentos"
         app:layout_constraintBottom_toTopOf="@+id/Med3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintHorizontal_bias="0.619"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/Med3"
-        android:layout_width="293dp"
-        android:layout_height="45dp"
+        android:layout_width="213dp"
+        android:layout_height="47dp"
         android:layout_marginBottom="24dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Name"
+        android:hint="Reporte de Doctor"
         app:layout_constraintBottom_toTopOf="@+id/Med4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintHorizontal_bias="0.68"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/Med4"
-        android:layout_width="290dp"
-        android:layout_height="86dp"
-        android:layout_marginBottom="24dp"
+        android:layout_width="288dp"
+        android:layout_height="73dp"
+        android:layout_marginBottom="20dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:hint="Reporte de Psicologo"
         app:layout_constraintBottom_toTopOf="@+id/saveMed"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintHorizontal_bias="0.447"
         app:layout_constraintStart_toStartOf="parent" />
 
     <AutoCompleteTextView
@@ -120,8 +121,42 @@
         android:layout_marginTop="68dp"
         android:layout_marginEnd="124dp"
         android:layout_marginRight="124dp"
-        android:hint="AutoCompleteTextView"
+        android:hint="Nombre del Niño"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="76dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="196dp"
+        android:hint="Nombre"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginBottom="60dp"
+        android:text="Button"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="73dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="192dp"
+        android:text=""
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

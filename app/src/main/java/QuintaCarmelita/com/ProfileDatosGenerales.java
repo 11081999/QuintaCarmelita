@@ -47,6 +47,7 @@ public class ProfileDatosGenerales  extends AppCompatActivity {
         final AutoCompleteTextView tv=(AutoCompleteTextView) findViewById(R.id.autoCompleteTextView6);
         tv.setText(getIntent().getStringExtra("NOM"));
 
+
         //buttonDelete= findViewById(R.id.button5);
         buttonUpdate= findViewById(R.id.button6);
 
@@ -109,6 +110,14 @@ public class ProfileDatosGenerales  extends AppCompatActivity {
         buttonUpdate.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
                 updateKidProfileOnFirebaseDatabase(inputKidNmae);
+            }
+        });
+        Button bot1=(Button) findViewById(R.id.RegDG);
+        bot1.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(ProfileDatosGenerales.this,ProfileMenuActivity.class);
+                startActivity(intent);
             }
         });
     }

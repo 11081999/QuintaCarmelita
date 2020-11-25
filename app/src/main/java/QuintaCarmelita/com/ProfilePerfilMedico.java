@@ -52,6 +52,18 @@ public class ProfilePerfilMedico  extends AppCompatActivity {
         setContentView(R.layout.activity_profile_perfilmedico);
         final AutoCompleteTextView tv=(AutoCompleteTextView) findViewById(R.id.autoCompleteTextView5);
         tv.setText(getIntent().getStringExtra("NOM"));
+        String a =getIntent().getStringExtra("NOM");
+        final TextView tv1=(TextView)findViewById(R.id.textView3);
+        tv1.setText(a);
+
+        Button bot1=(Button) findViewById(R.id.regMed);
+        bot1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(ProfilePerfilMedico.this,ProfileMenuActivity.class);
+                startActivity(intent);
+            }
+        });
         //buttonDelete= findViewById(R.id.button5);
         buttonUpdate= findViewById(R.id.saveMed);
 

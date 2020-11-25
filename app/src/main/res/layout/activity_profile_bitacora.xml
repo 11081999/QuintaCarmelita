@@ -17,7 +17,7 @@
         android:layout_marginBottom="8dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:hint="Conductas positivas"
         app:layout_constraintBottom_toTopOf="@+id/Bit2"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -30,7 +30,7 @@
         android:layout_marginBottom="16dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:hint="Consuctas Negativas"
         app:layout_constraintBottom_toTopOf="@+id/Bitacora3"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -43,7 +43,7 @@
         android:layout_marginBottom="16dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:hint="Incidentos o Eventos"
         app:layout_constraintBottom_toTopOf="@+id/Bit4"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -56,7 +56,7 @@
         android:layout_marginBottom="12dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:hint="Area Fisica"
         app:layout_constraintBottom_toTopOf="@+id/Bit5"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -69,7 +69,7 @@
         android:layout_marginBottom="8dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:hint="Consecuencias"
         app:layout_constraintBottom_toTopOf="@+id/Bit6"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -82,7 +82,7 @@
         android:layout_marginBottom="128dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:hint="Comentarios"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -118,7 +118,41 @@
         android:layout_marginTop="64dp"
         android:layout_marginEnd="124dp"
         android:layout_marginRight="124dp"
-        android:hint="AutoCompleteTextView"
+        android:hint="Nombre del Niño"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="77dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="208dp"
+        android:layout_marginLeft="208dp"
+        android:layout_marginTop="172dp"
+        android:hint="Nombre"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginBottom="56dp"
+        android:text="Button"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="66dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="172dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginRight="56dp"
+        android:text=""
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

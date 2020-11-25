@@ -18,6 +18,7 @@
         android:layout_marginEnd="76dp"
         android:layout_marginRight="76dp"
         android:ems="10"
+        android:hint="talla"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -30,6 +31,7 @@
         android:layout_marginLeft="120dp"
         android:layout_marginTop="304dp"
         android:ems="10"
+        android:hint="peso"
         android:inputType="numberDecimal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -42,6 +44,7 @@
         android:layout_marginEnd="76dp"
         android:layout_marginRight="76dp"
         android:ems="10"
+        android:hint="fecha de ingreso"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal" />
@@ -54,6 +57,7 @@
         android:layout_marginLeft="128dp"
         android:layout_marginTop="16dp"
         android:ems="10"
+        android:hint="fecha de llegada"
         android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal2" />
@@ -66,19 +70,19 @@
         android:layout_marginRight="60dp"
         android:layout_marginBottom="240dp"
         android:ems="10"
+        android:hint="Status"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <AutoCompleteTextView
         android:id="@+id/autoCompleteTextView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="205dp"
+        android:layout_height="44dp"
         android:layout_marginTop="68dp"
         android:layout_marginEnd="108dp"
         android:layout_marginRight="108dp"
-        android:hint="AutoCompleteTextView"
+        android:hint="Nombre"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -90,8 +94,8 @@
         android:layout_marginLeft="168dp"
         android:layout_marginTop="108dp"
         android:ems="10"
+        android:hint="Nombre"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/autoCompleteTextView6" />
 
@@ -103,8 +107,8 @@
         android:layout_marginEnd="72dp"
         android:layout_marginRight="72dp"
         android:ems="10"
+        android:hint="Nacimiento"
         android:inputType="textPersonName"
-        android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/autoCompleteTextView6" />
 
@@ -128,8 +132,19 @@
         android:layout_marginLeft="160dp"
         android:layout_marginBottom="128dp"
         android:alpha="0.0"
-
         android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginBottom="132dp"
+        android:text="Button"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
