@@ -1,5 +1,5 @@
 /*
-package QuintaCarmelita.com;
+package quintacarmelita.com;
 
 import android.os.Bundle;
 import android.text.TextUtils;

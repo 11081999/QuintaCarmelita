@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="QuintaCarmelita.com">
+    package="quintacarmelita.com">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -12,23 +12,23 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ProfileActivity"
+            android:name="quintacarmelita.com.ProfileActivity"
             android:label="@string/title_activity_log"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".RegisterActivity">
+        <activity android:name="quintacarmelita.com.RegisterActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".SignedInActivity" />
-        <activity android:name=".ProfileCreateActivity" />
-        <activity android:name=".ProfileMenuActivity" />
-        <activity android:name=".ProfileDatosGenerales" />
-        <activity android:name=".ProfilePerfilMedico" />
-        <activity android:name=".ProfileBitacora" />
+        <activity android:name="quintacarmelita.com.LoginActivity" />
+        <activity android:name="quintacarmelita.com.SignedInActivity" />
+        <activity android:name="quintacarmelita.com.ProfileCreateActivity" />
+        <activity android:name="quintacarmelita.com.ProfileMenuActivity" />
+        <activity android:name="quintacarmelita.com.ProfileDatosGenerales" />
+        <activity android:name="quintacarmelita.com.ProfilePerfilMedico" />
+        <activity android:name="quintacarmelita.com.ProfileBitacora" />
 
     </application>
 

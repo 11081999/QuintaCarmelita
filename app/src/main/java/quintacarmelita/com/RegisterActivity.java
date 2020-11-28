@@ -1,4 +1,4 @@
-package QuintaCarmelita.com;
+package quintacarmelita.com;
 
 import android.content.Intent;
 import android.os.Bundle;

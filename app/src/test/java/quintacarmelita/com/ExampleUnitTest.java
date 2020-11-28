@@ -1,4 +1,4 @@
-package QuintaCarmelita.com;
+package quintacarmelita.com;
 
 import org.junit.Test;
 

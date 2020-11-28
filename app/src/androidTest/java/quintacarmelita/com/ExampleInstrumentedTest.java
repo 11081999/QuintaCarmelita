@@ -1,4 +1,4 @@
-package QuintaCarmelita.com;
+package quintacarmelita.com;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("QuintaCarmelita.com", appContext.getPackageName());
+        assertEquals("quintacarmelita.com", appContext.getPackageName());
     }
 }

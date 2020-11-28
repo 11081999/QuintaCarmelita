@@ -1,4 +1,4 @@
-package QuintaCarmelita.com;
+package quintacarmelita.com;
 
 public class User {
     public String name;

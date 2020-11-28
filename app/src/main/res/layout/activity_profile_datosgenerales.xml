@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/perfil_datosgenerales"
     android:visibility="visible"
-    tools:context="QuintaCarmelita.com.ProfileDatosGenerales"
+    tools:context="quintacarmelita.com.ProfileDatosGenerales"
     tools:visibility="visible">
 
 

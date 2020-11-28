@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/busqueda"
-    tools:context="QuintaCarmelita.com.SignedInActivity">
+    tools:context="quintacarmelita.com.SignedInActivity">
 
     <Button
         android:id="@+id/buttonCreateKid"

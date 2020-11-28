@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/perfil_medico"
     android:visibility="visible"
-    tools:context="QuintaCarmelita.com.ProfilePerfilMedico">
+    tools:context="quintacarmelita.com.ProfilePerfilMedico">
 
 
     <Button

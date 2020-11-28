@@ -1,4 +1,4 @@
-package QuintaCarmelita.com;
+package quintacarmelita.com;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -20,6 +20,9 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
+
+import quintacarmelita.com.R;
+import quintacarmelita.com.SignedInActivity;
 
 public class LoginActivity extends AppCompatActivity {
 

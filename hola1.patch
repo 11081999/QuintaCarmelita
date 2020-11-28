@@ -1,10 +1,10 @@
-Index: app/src/main/java/QuintaCarmelita/com/ProfileActivity.java
+Index: app/src/main/java/quintacarmelita/com/ProfileActivity.java
 IDEA additional info:
 Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 <+>UTF-8
 ===================================================================
---- app/src/main/java/QuintaCarmelita/com/ProfileActivity.java	(revision 0159191c82d8502a51c180411ca104c0535d3e32)
-+++ app/src/main/java/QuintaCarmelita/com/ProfileActivity.java	(revision 81b8b1dd592800b2fb14ccb6c521a0adda74a574)
+--- app/src/main/java/quintacarmelita/com/ProfileActivity.java	(revision 0159191c82d8502a51c180411ca104c0535d3e32)
++++ app/src/main/java/quintacarmelita/com/ProfileActivity.java	(revision 81b8b1dd592800b2fb14ccb6c521a0adda74a574)
 @@ -4,6 +4,8 @@
  import android.os.Bundle;
  import android.util.Log;
