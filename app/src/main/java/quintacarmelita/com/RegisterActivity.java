@@ -63,12 +63,16 @@ public class RegisterActivity extends AppCompatActivity {
         */
 
         // if user is not the owner
-        if(mAuth.getCurrentUser().getEmail() == "gina@laquinta.org.mx"){
+        String currentEmail= mAuth.getCurrentUser().getEmail();
+        if(currentEmail.compareTo("gina@laquinta.org.mx") == 0){
+
+            Log.d("My tag1", "SAMEE");
 
         }else{
+            Log.d("My tag1", currentEmail);
+            Log.d("My tag2", "gina@laquinta.org.mx");
             startActivity(new Intent(RegisterActivity.this, SignedInActivity.class));
             finish();
-
         }
 
     }
