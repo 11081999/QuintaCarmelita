@@ -55,10 +55,22 @@ public class RegisterActivity extends AppCompatActivity {
         super.onStart();
 
         // if user logged in, go to sign-in screen
+        /*
         if (mAuth.getCurrentUser() != null) {
             startActivity(new Intent(this, SignedInActivity.class));
             finish();
         }
+        */
+
+        // if user is not the owner
+        if(mAuth.getCurrentUser().getEmail() == "gina@laquinta.org.mx"){
+
+        }else{
+            startActivity(new Intent(RegisterActivity.this, SignedInActivity.class));
+            finish();
+
+        }
+
     }
 
     @Override

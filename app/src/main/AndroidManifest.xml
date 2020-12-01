@@ -15,14 +15,14 @@
             android:name="quintacarmelita.com.ProfileActivity"
             android:label="@string/title_activity_log"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name="quintacarmelita.com.RegisterActivity">
+        <activity android:name="quintacarmelita.com.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="quintacarmelita.com.LoginActivity" />
+        <activity android:name="quintacarmelita.com.RegisterActivity" />
         <activity android:name="quintacarmelita.com.SignedInActivity" />
         <activity android:name="quintacarmelita.com.ProfileCreateActivity" />
         <activity android:name="quintacarmelita.com.ProfileMenuActivity" />

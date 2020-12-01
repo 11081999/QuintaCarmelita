@@ -83,13 +83,19 @@ public class SignedInActivity extends AppCompatActivity {
 
     public void onLogout(View view) {
         FirebaseAuth.getInstance().signOut();
-        startActivity(new Intent(this, RegisterActivity.class));
+        startActivity(new Intent(this, LoginActivity.class));
     }
 
     public void createKid(View view) {
         Intent intent=new Intent(SignedInActivity.this, ProfileCreateActivity.class);
         startActivity(intent);
     }
+
+    public void createAccount(View view) {
+        Intent intent=new Intent(SignedInActivity.this, RegisterActivity.class);
+        startActivity(intent);
+    }
+
 
     public void getUserInformation() {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();

@@ -4,47 +4,86 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="quintacarmelita.com.RegisterActivity">
+    tools:context="quintacarmelita.com.RegisterActivity"
+    android:visibility="visible"
+    android:background="@drawable/registro"
+    tools:visibility="visible">
 
-<LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:background="@drawable/registro"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:padding="@dimen/activity_horizontal_margin"
-        android:id="@+id/linearLayout3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
-
-
+    <!--
+        username
+        -->
     <EditText
         android:id="@+id/username"
-        android:layout_width="230dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="135dip"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".05"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.338"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         android:ems="10"
         android:hint="@string/username"
         android:inputType="textPersonName" />
 
+    <!--
+        Apellido
+        Me di cuenta que hacia falta un texto para el apellido asi que lo agregue uno
+        para que lo modifiques tu uwu
+        -->
+    <EditText
+        android:id="@+id/apellido"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".05"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.46"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:ems="10"
+        android:hint=""
+        android:inputType="textPersonName" />
+    <!--
+    email
+    -->
     <EditText
         android:id="@+id/email"
-        android:layout_width="230dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dip"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".05"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.577"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
         android:maxLines="1"
         android:singleLine="true"
         android:textColor="@android:color/black" />
 
+    <!--
+        contraseña
+        -->
     <EditText
         android:id="@+id/password"
-        android:layout_width="230dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dip"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".05"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         android:focusableInTouchMode="true"
         android:hint="@string/password"
         android:imeActionId="@+id/login"
@@ -56,11 +95,21 @@
 
     <!-- Link to Login Screen -->
 
+    <!--
+         ya tengo una cuenta
+
     <Button
         android:id="@+id/sign_in_button"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dip"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".04"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.79"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         android:background="@null"
         android:onClick="onLoginClicked"
         android:text="@string/btn_link_to_login"
@@ -68,12 +117,24 @@
         android:textColor="@color/input_login"
         android:textSize="15dp" />
 
+    -->
+
+    <!--
+        crear cuenta
+        -->
     <Button
         android:id="@+id/sign_up_button"
         style="?android:textAppearanceSmall"
-        android:layout_width="140dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="125dip"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".04"
+        app:layout_constraintWidth_percent="0.3"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintVertical_bias="0.85"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         android:background="@color/colorAccent"
         android:onClick="onRegisterClicked"
         android:text="@string/action_sign_in_short"
@@ -83,18 +144,16 @@
         android:alpha="0.0"/>
 
 
-</LinearLayout>
-
-    <ProgressBar
-        android:id="@+id/progressBar"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_gravity="center|bottom"
-        android:layout_marginBottom="20dp"
-        android:visibility="gone"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="parent" />
+<ProgressBar
+android:id="@+id/progressBar"
+android:layout_width="30dp"
+android:layout_height="30dp"
+android:layout_gravity="center|bottom"
+android:layout_marginBottom="20dp"
+android:visibility="gone"
+app:layout_constraintTop_toTopOf="parent"
+app:layout_constraintStart_toStartOf="parent"
+app:layout_constraintEnd_toStartOf="parent"
+app:layout_constraintBottom_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
