@@ -8,155 +8,168 @@
     android:visibility="visible"
     tools:context="quintacarmelita.com.ProfilePerfilMedico">
 
-
     <Button
         android:id="@+id/saveMed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
-        android:layout_marginLeft="160dp"
-        android:layout_marginBottom="52dp"
         android:alpha="0.0"
 
-        android:text="Button"
+        android:text="guardar"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.909" />
 
     <Button
         android:id="@+id/regMed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="56dp"
-        android:layout_marginRight="56dp"
-        android:layout_marginBottom="52dp"
-        android:text="Button"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:text="regresar"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.823"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.906" />
 
     <EditText
         android:id="@+id/MedNom"
-        android:layout_width="112dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="220dp"
-        android:layout_marginEnd="76dp"
-        android:layout_marginRight="76dp"
+        android:layout_width="183dp"
+        android:layout_height="46dp"
+        android:autofillHints=""
         android:ems="10"
-        android:hint="Doctor"
+        android:hint="doctor"
         android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.802"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.314" />
 
     <EditText
         android:id="@+id/MedSur"
-        android:layout_width="105dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="76dp"
-        android:layout_marginRight="76dp"
+        android:layout_width="168dp"
+        android:layout_height="40dp"
         android:ems="10"
-        android:hint="Psicologo"
+        android:hint="psicologo"
+        android:importantForAutofill="no"
         android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MedNom" />
+        app:layout_constraintHorizontal_bias="0.773"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.381" />
 
     <EditText
         android:id="@+id/Med1"
-        android:layout_width="209dp"
-        android:layout_height="37dp"
-        android:layout_marginBottom="20dp"
+        android:layout_width="319dp"
+        android:layout_height="56dp"
+        android:autofillHints=""
         android:ems="10"
-        android:hint="Alergias"
+        android:hint="alergias"
         android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/Med2"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.702"
+        app:layout_constraintHorizontal_bias="0.684"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MedSur"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.464" />
 
     <EditText
         android:id="@+id/Med2"
-        android:layout_width="193dp"
-        android:layout_height="46dp"
-        android:layout_marginBottom="28dp"
+        android:layout_width="313dp"
+        android:layout_height="50dp"
+        android:autofillHints=""
         android:ems="10"
-        android:hint="Medicamentos"
+        android:hint="medicamentos"
         android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/Med3"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.596"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.558" />
 
     <EditText
         android:id="@+id/Med3"
-        android:layout_width="213dp"
-        android:layout_height="47dp"
-        android:layout_marginBottom="36dp"
+        android:layout_width="325dp"
+        android:layout_height="74dp"
         android:ems="10"
-        android:hint="Reporte de Doctor"
+        android:hint="reporte_de_doctor"
+        android:importantForAutofill="no"
         android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/Med4"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.656"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.66" />
 
     <EditText
         android:id="@+id/Med4"
-        android:layout_width="288dp"
-        android:layout_height="73dp"
-        android:layout_marginBottom="20dp"
+        android:layout_width="422dp"
+        android:layout_height="70dp"
+        android:autofillHints=""
         android:ems="10"
+        android:hint="reporte_de_psicologo"
         android:inputType="textPersonName"
-        android:hint="Reporte de Psicologo"
-        app:layout_constraintBottom_toTopOf="@+id/saveMed"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.447"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.806" />
 
     <AutoCompleteTextView
         android:id="@+id/autoCompleteTextView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="124dp"
-        android:layout_marginRight="124dp"
-        android:hint="Nombre del Niño"
+        android:layout_width="332dp"
+        android:layout_height="70dp"
+        android:hint="nombre_del_ni_o"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.092" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="76dp"
-        android:layout_height="26dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginLeft="44dp"
-        android:layout_marginTop="196dp"
-        android:hint="Nombre"
+        android:layout_width="108dp"
+        android:layout_height="22dp"
+        android:hint="nombre"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.171"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.318" />
 
     <Button
         android:id="@+id/button8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginLeft="52dp"
-        android:layout_marginBottom="60dp"
-        android:text="Button"
+        android:text="editar"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.185"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.908" />
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="73dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="120dp"
-        android:layout_marginLeft="120dp"
-        android:layout_marginTop="192dp"
+        android:layout_width="85dp"
+        android:layout_height="23dp"
         android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.168"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.362" />
 </androidx.constraintlayout.widget.ConstraintLayout>
