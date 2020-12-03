@@ -56,6 +56,8 @@ public class LoginActivity extends AppCompatActivity {
             startActivity(new Intent(this, SignedInActivity.class));
             finish();
         }
+
+
     }
 
     @Override

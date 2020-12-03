@@ -27,14 +27,14 @@
         android:layout_height="0dp"
         android:background="@color/colorAccent"
         android:onClick="onLogout"
-        android:text="@string/btn_sign_out"
+        android:text="Cerrar Sesión"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.055"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.836"
-        app:layout_constraintWidth_percent="0.2" />
+        app:layout_constraintWidth_percent="0.3" />
 
     <Button
         android:id="@+id/button"
@@ -62,10 +62,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.914"
-        app:layout_constraintWidth_percent="0.2" />
+        app:layout_constraintWidth_percent="0.3" />
 
     <Button
-        android:id="@+id/createAccount"
+        android:id="@+id/buttonCrearcuenta"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:onClick="createAccount"
@@ -73,11 +73,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.055"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.761"
-        app:layout_constraintWidth_percent="0.2" />
+        app:layout_constraintVertical_bias="0.758"
+        app:layout_constraintWidth_percent="0.3" />
 
     <TextView
         android:id="@+id/textView"
