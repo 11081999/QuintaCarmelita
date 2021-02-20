@@ -62,7 +62,9 @@ public class RegisterActivity extends AppCompatActivity {
         }
         */
 
+        //IF disabled, anyone can create profiles
         // if user is not the owner
+        /*
         String currentEmail= mAuth.getCurrentUser().getEmail();
         if(currentEmail.compareTo("gina@laquinta.org.mx") == 0){
 
@@ -70,10 +72,11 @@ public class RegisterActivity extends AppCompatActivity {
 
         }else{
             Log.d("My tag1", currentEmail);
-            Log.d("My tag2", "gina@laquinta.org.mx");
-            startActivity(new Intent(RegisterActivity.this, SignedInActivity.class));
-            finish();
+            //Log.d("My tag2", "gina@laquinta.org.mx");
+            //startActivity(new Intent(RegisterActivity.this, SignedInActivity.class));
+            //finish();
         }
+        */
 
     }
 
