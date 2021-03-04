@@ -11,12 +11,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name="quintacarmelita.com.ProfileActivity"
-            android:label="@string/title_activity_log"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
         <activity android:name="quintacarmelita.com.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
