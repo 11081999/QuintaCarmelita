@@ -10,27 +10,24 @@
     <Button
         android:id="@+id/butttonDatosGenerales"
         android:layout_width="0dp"
-        app:layout_constraintWidth_percent="0.6"
         android:layout_height="46dp"
-        android:alpha="0.0"
-        android:background="@color/colorAccent"
+        android:background="#7BC6C0"
         android:onClick="clickedButtonDatosGenerales"
-        android:text="@string/btn_login"
+        android:text="Datos Generales"
         android:textColor="@android:color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.4" />
+        app:layout_constraintVertical_bias="0.4"
+        app:layout_constraintWidth_percent="0.6" />
 
     <Button
         android:id="@+id/buttonPerfilMedico"
         android:layout_width="0dp"
-        app:layout_constraintWidth_percent="0.6"
         android:layout_height="46dp"
-        android:alpha="0.0"
-        android:background="@color/colorAccent"
+        android:background="#7BC6C0"
         android:onClick="clickedbuttonPerfilMedico"
         android:text="@string/btn_login"
         android:textColor="@android:color/black"
@@ -39,15 +36,14 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.478" />
+        app:layout_constraintVertical_bias="0.478"
+        app:layout_constraintWidth_percent="0.6" />
 
     <Button
         android:id="@+id/buttonCalendario"
         android:layout_width="0dp"
-        app:layout_constraintWidth_percent="0.6"
         android:layout_height="46dp"
-        android:alpha="0.0"
-        android:background="@color/colorAccent"
+        android:background="#7BC6C0"
         android:onClick="clickedbuttonCalendario"
         android:text="@string/btn_login"
         android:textColor="@android:color/black"
@@ -56,15 +52,14 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.556" />
+        app:layout_constraintVertical_bias="0.556"
+        app:layout_constraintWidth_percent="0.6" />
 
     <Button
         android:id="@+id/buttonBitacora"
         android:layout_width="0dp"
-        app:layout_constraintWidth_percent="0.6"
         android:layout_height="46dp"
-        android:alpha="0.0"
-        android:background="@color/colorAccent"
+        android:background="#7BC6C0"
         android:onClick="clickedbuttonBitacora"
         android:text="@string/btn_login"
         android:textColor="@android:color/black"
@@ -73,7 +68,8 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.623" />
+        app:layout_constraintVertical_bias="0.623"
+        app:layout_constraintWidth_percent="0.6" />
 
     <AutoCompleteTextView
         android:id="@+id/autoCompleteTextView4"
@@ -87,4 +83,18 @@
         app:layout_constraintVertical_bias="0.106"
         android:hint="Nombre"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="256dp"
+        android:layout_marginLeft="256dp"
+        android:background="@android:color/transparent"
+        android:text="Regresar"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.737" />
 </androidx.constraintlayout.widget.ConstraintLayout>

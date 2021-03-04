@@ -18,32 +18,32 @@
         android:id="@+id/editTextNumberDecimal"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:ems="10"
+        android:hint="C/M/G"
+        android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent=".06"
-        app:layout_constraintWidth_percent="0.16"
         app:layout_constraintHorizontal_bias="0.782"
-        app:layout_constraintVertical_bias="0.45"
         app:layout_constraintStart_toStartOf="parent"
-        android:ems="10"
-        android:hint="talla"
-        android:inputType="text"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.45"
+        app:layout_constraintWidth_percent="0.16" />
 
     <EditText
         android:id="@+id/editTextNumberDecimal2"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:hint="0.0kg"
+        android:inputType="numberDecimal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent=".06"
-        app:layout_constraintWidth_percent="0.16"
         app:layout_constraintHorizontal_bias="0.35"
-        app:layout_constraintVertical_bias="0.45"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:hint="peso"
-        android:inputType="numberDecimal"
+        app:layout_constraintVertical_bias="0.45"
+        app:layout_constraintWidth_percent="0.16"
 
 
         />
@@ -56,7 +56,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:ems="10"
-        android:hint="fecha de ingreso"
+        android:hint="dd/mm"
         android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -76,7 +76,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:ems="10"
-        android:hint="fecha de llegada"
+        android:hint="dd/mm"
         android:inputType="text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -91,6 +91,15 @@
     <!--
     boton de status
     -->
+
+    <!--
+    buscador
+    -->
+
+    <!--
+    boton de nombre
+    -->
+
     <EditText
         android:id="@+id/editTextTextPersonName"
         android:layout_width="0dp"
@@ -101,15 +110,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent=".06"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.672"
+        app:layout_constraintVertical_bias="0.659"
         app:layout_constraintWidth_percent="0.66" />
 
-    <!--
-    buscador
-    -->
     <AutoCompleteTextView
         android:id="@+id/autoCompleteTextView6"
         android:layout_width="0dp"
@@ -118,15 +123,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent=".06"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.458"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.10"
+        app:layout_constraintVertical_bias="0.103"
         app:layout_constraintWidth_percent="0.5" />
 
-    <!--
-    boton de nombre
-    -->
     <EditText
         android:id="@+id/editTextTextPersonName4"
         android:layout_width="0dp"
@@ -136,7 +138,7 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent=".04"
+        app:layout_constraintHeight_percent=".05"
         app:layout_constraintHorizontal_bias="0.75"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/autoCompleteTextView6"
@@ -147,12 +149,81 @@
     <!--
     boton de nacimiento
     -->
+
+    <TextView
+        android:id="@+id/fechaIngreso"
+        android:layout_width="74dp"
+        android:layout_height="53dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Fecha de ingreso"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".05"
+        app:layout_constraintHorizontal_bias="0.617"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.542"
+        app:layout_constraintWidth_percent="0.16" />
+
+    <TextView
+        android:id="@+id/fechaLlegada"
+        android:layout_width="74dp"
+        android:layout_height="53dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Fecha de llegada"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".05"
+        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.547"
+        app:layout_constraintWidth_percent="0.16" />
+
+    <TextView
+        android:id="@+id/pesoLabel"
+        android:layout_width="74dp"
+        android:layout_height="53dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Peso"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".05"
+        app:layout_constraintHorizontal_bias="0.142"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.464"
+        app:layout_constraintWidth_percent="0.16" />
+
+    <TextView
+        android:id="@+id/tallaLabel"
+        android:layout_width="74dp"
+        android:layout_height="53dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Talla"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".05"
+        app:layout_constraintHorizontal_bias="0.617"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.455"
+        app:layout_constraintWidth_percent="0.16" />
+
     <EditText
         android:id="@+id/editTextTextPersonName5"
         android:layout_width="0dp"
         app:layout_constraintWidth_percent="0.5"
         android:layout_height="0dp"
-        app:layout_constraintHeight_percent=".04"
+        app:layout_constraintHeight_percent=".05"
         app:layout_constraintHorizontal_bias="0.7"
         app:layout_constraintVertical_bias="0.38"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -167,48 +238,58 @@
     <!--
     boton de regresar
     -->
-    <Button
-        android:id="@+id/RegDG"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:text="Button"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent=".05"
-        app:layout_constraintHorizontal_bias="0.8"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.806"
-        app:layout_constraintWidth_percent="0.19" />
 
     <!--
     boton de guardar
     -->
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:alpha="0.0"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent=".05"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.806"
-        app:layout_constraintWidth_percent="0.18" />
 
     <!--
     boton de editar
     -->
     <Button
+        android:id="@+id/RegDG"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/transparent"
+        android:text="Regresar"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".05"
+        app:layout_constraintHorizontal_bias="0.798"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.81"
+        app:layout_constraintWidth_percent="0.16" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/transparent"
+        android:text="Guadar"
+        android:textColor="#7BC6C0"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".05"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.812"
+        app:layout_constraintWidth_percent="0.16" />
+
+    <Button
         android:id="@+id/button9"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="Button"
-        android:visibility="invisible"
+        android:background="@android:color/transparent"
+        android:text="Editar"
+        android:textColor="#7BC6C0"
+        android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent=".05"
@@ -217,5 +298,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.806"
         app:layout_constraintWidth_percent="0.16" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
