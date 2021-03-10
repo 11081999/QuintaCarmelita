@@ -4,13 +4,20 @@ public class User {
     public String name;
     public String email;
 
+    private UserType userType;
+
     public User(){
-        //public no-arg constructor neededd
+        //public no-arg constructor needed
     }
 
-    public User(String name, String email){
+    public User(String name, String email, UserType userType){
         this.name= name;
         this.email= email;
+        this.userType = userType;
+    }
+
+    public String getUserType(){
+        return this.userType.stringValue;
     }
 
     public void setName(String name){

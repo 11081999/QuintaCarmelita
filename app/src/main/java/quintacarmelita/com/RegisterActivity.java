@@ -32,7 +32,8 @@ public class RegisterActivity extends AppCompatActivity {
     private String userId;
     private String emailAddress;
 
-    private FirebaseAuth mAuth;
+    //private FirebaseAuth mAuth;
+    private DBFirebase db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +45,8 @@ public class RegisterActivity extends AppCompatActivity {
         inputUsername = (EditText) findViewById(R.id.username);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
-        mAuth = FirebaseAuth.getInstance();
+        //mAuth = FirebaseAuth.getInstance();
+        db = new DBFirebase();
 
         //Instance Database
         mFirebaseDatabaseInstance= FirebaseDatabase.getInstance();
@@ -90,6 +92,8 @@ public class RegisterActivity extends AppCompatActivity {
         String emailInput = inputEmail.getText().toString().trim();
         String password = inputPassword.getText().toString().trim();
         final String username = inputUsername.getText().toString().trim();
+        //TODO esta variable debe de tomar el valor "administrativo", "yaya" o "medico". Dependiendo del tipo de cuenta que se va a crear
+        final String userTypeString = UserType.ADMINISTRATIVO.stringValue;
 
         if (TextUtils.isEmpty(username)) {
             Toast.makeText(getApplicationContext(), "Enter username!", Toast.LENGTH_SHORT).show();
@@ -114,7 +118,7 @@ public class RegisterActivity extends AppCompatActivity {
         progressBar.setVisibility(View.VISIBLE);
 
         //create user
-        mAuth.createUserWithEmailAndPassword(emailInput, password)
+        db.createUserWithEmailAndPassword(emailInput, password)
                 .addOnCompleteListener(RegisterActivity.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -139,7 +143,7 @@ public class RegisterActivity extends AppCompatActivity {
                             userId= user.getUid();
                             emailAddress= user.getEmail();
 
-                            User myUser= new User(username.toString(), emailAddress.toString());
+                            User myUser= new User(username.toString(), emailAddress.toString(), UserType.selectCorrectUserType(userTypeString));
                             mFireBaseDatabase.child(userId).setValue(myUser);
 
                             //____Database______//
