@@ -95,6 +95,10 @@ public class SignedInActivity extends AppCompatActivity {
         Intent intent=new Intent(SignedInActivity.this, RegisterActivity.class);
         startActivity(intent);
     }
+    public void goToCalendar(View view){
+        Intent intent=new Intent(SignedInActivity.this, ProfileCalendario.class);
+        startActivity(intent);
+    }
 
 
     public void getUserInformation() {
