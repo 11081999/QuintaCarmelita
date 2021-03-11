@@ -69,6 +69,10 @@ public class ProfileCreateActivity extends AppCompatActivity {
         btn_bs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+//<<<<<<< Authentication
+//=======
+                //Antes era ProfileActivity pero esa ya no existe
+//>>>>>>> master
                 Intent intent=new Intent(ProfileCreateActivity.this, ProfileCreateActivity.class);
                 startActivity(intent);
 

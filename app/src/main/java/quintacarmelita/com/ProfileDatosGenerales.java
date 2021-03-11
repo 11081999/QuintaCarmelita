@@ -40,7 +40,7 @@ public class ProfileDatosGenerales  extends AppCompatActivity {
 
 
         //buttonDelete= findViewById(R.id.button5);
-        buttonUpdate= findViewById(R.id.button6);
+        buttonUpdate= findViewById(R.id.GuardarDG);
 
         mFirebaseDatabaseInstance= FirebaseDatabase.getInstance();
         // get reference to 'niños' node

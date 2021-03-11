@@ -5,29 +5,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/perfil"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="quintacarmelita.com.ProfileCreateActivity">
 
     <Button
         android:id="@+id/button2"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="@drawable/busqueda_button"
         android:ems="10"
         android:text="Buscar"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".06"
+        app:layout_constraintHorizontal_bias="0.727"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.107"
-        app:layout_constraintWidth_percent="0.2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent=".06"
-        app:layout_constraintHorizontal_bias="0.73" />
+        app:layout_constraintWidth_percent="0.2" />
 
     <Button
         android:id="@+id/guardarCambios"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="204dp"
+        android:layout_height="59dp"
+        android:background="@drawable/rounded_corner"
+        android:fontFamily="sans-serif-smallcaps"
         android:onClick="onSaveCreatedClicked"
         android:text="Guardar"
+        android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent=".04"
@@ -46,10 +52,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent=".04"
-        app:layout_constraintHorizontal_bias="0.868"
+        app:layout_constraintHorizontal_bias="0.754"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.336"
+        app:layout_constraintVertical_bias="0.268"
         app:layout_constraintWidth_percent="0.35" />
 
     <EditText
@@ -61,10 +67,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent=".04"
-        app:layout_constraintHorizontal_bias="0.797"
+        app:layout_constraintHorizontal_bias="0.751"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.453"
+        app:layout_constraintVertical_bias="0.383"
         app:layout_constraintWidth_percent="0.35" />
 
     <AutoCompleteTextView
