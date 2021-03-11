@@ -93,7 +93,7 @@ public class RegisterActivity extends AppCompatActivity {
         String password = inputPassword.getText().toString().trim();
         final String username = inputUsername.getText().toString().trim();
         //TODO esta variable debe de tomar el valor "administrativo", "yaya" o "medico". Dependiendo del tipo de cuenta que se va a crear
-        final String userTypeString = UserType.ADMINISTRATIVO.stringValue;
+        final String userTypeString = UserType.DIRECTOR.stringValue;
 
         if (TextUtils.isEmpty(username)) {
             Toast.makeText(getApplicationContext(), "Enter username!", Toast.LENGTH_SHORT).show();

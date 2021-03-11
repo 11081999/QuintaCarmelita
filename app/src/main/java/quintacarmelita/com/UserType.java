@@ -3,7 +3,7 @@ package quintacarmelita.com;
 public enum UserType {
     ADMINISTRATIVO("administrativo"),
     YAYA("yaya"),
-    MEDICO("medico");
+    DIRECTOR("director");
 
     final String stringValue;
 
