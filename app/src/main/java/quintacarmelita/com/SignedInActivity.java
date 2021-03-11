@@ -30,12 +30,15 @@ public class SignedInActivity extends AppCompatActivity {
     private FirebaseDatabase mFirebaseDatabaseInstance;
     private DatabaseReference mFireBaseDatabase;
 
+    private DBFirebase db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signed_in);
 
+        db = new DBFirebase();
+        db.setCurrentUser();
 
         final ArrayList<String> red=new ArrayList<>();
         final ArrayAdapter list=new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1,red);

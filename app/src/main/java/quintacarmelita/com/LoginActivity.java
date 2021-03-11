@@ -29,7 +29,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText inputEmail, inputPassword;
     private ProgressBar progressBar;
 
-    private FirebaseAuth mAuth;
+    private DBFirebase db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +44,7 @@ public class LoginActivity extends AppCompatActivity {
         //progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
         // Initialize Firebase Auth
-        mAuth = FirebaseAuth.getInstance();
+        db = new DBFirebase();
     }
 
     @Override
@@ -52,7 +52,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onStart();
 
         // if user logged in, go to sign-in screen
-        if (mAuth.getCurrentUser() != null) {
+        if (db.isUserLoggedIn) {
             startActivity(new Intent(this, SignedInActivity.class));
             finish();
         }
@@ -69,6 +69,9 @@ public class LoginActivity extends AppCompatActivity {
     public void loginButtonClicked(View view) {
         String email = inputEmail.getText().toString();
         final String password = inputPassword.getText().toString();
+
+        Log.d("EMAIL", email);
+        Log.d("PASSWORD", password);
 
         if (TextUtils.isEmpty(email)) {
             Toast.makeText(getApplicationContext(), "Enter email address!", Toast.LENGTH_SHORT).show();
@@ -90,17 +93,20 @@ public class LoginActivity extends AppCompatActivity {
         }
 
         //authenticate user
-        mAuth.signInWithEmailAndPassword(email, password)
-                .addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
+        db.signInWithEmailAndPassword(email, password)
+            .addOnCompleteListener(
+                this,
+                new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (!task.isSuccessful()) {
                             // there was an error
-                            Toast.makeText(LoginActivity.this, "Authentication failed." + task.getException(),
-                                    Toast.LENGTH_LONG).show();
+                            Toast.makeText(LoginActivity.this, "Authentication failed." + task.getException(), Toast.LENGTH_LONG).show();
                             Log.e("MyTag", task.getException().toString());
 
                         } else {
+                            // Si el login es exitoso
+                            db.setCurrentUser();
                             Intent intent = new Intent(LoginActivity.this, SignedInActivity.class);
                             startActivity(intent);
                             finish();
