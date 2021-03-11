@@ -54,8 +54,9 @@ public class ProfileBitacora  extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         //buttonDelete= findViewById(R.id.button5);
-        buttonUpdate= findViewById(R.id.button4);
+        buttonUpdate= findViewById(R.id.button7);
 
         mFirebaseDatabaseInstance= FirebaseDatabase.getInstance();
         // get reference to 'niños' node
